@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rodzina Mińczyńskich</title>
+<meta name="description" content="Strona rodzinna Mińczyńskich – dyżury domowe i inne wspólne sprawy.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">🏡 Mińczyńscy</a>
+    <nav class="site-nav">
+      <a href="#duty">Dyżury</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section id="duty" class="duty-section wrap">
+    <div class="duty-heading">
+      <h1>Dyżury domowe</h1>
+      <p class="subtitle">Kto dziś dba o kuchnię, śmieci i sprzątanie?</p>
+    </div>
+
+    <div class="mode-toggle-card">
+      <div class="mode-toggle-text">
+        <strong>Tryb wakacyjny</strong>
+        <span id="mode-description">obowiązki zmieniają się co tydzień</span>
+      </div>
+      <label class="switch" for="vacation-toggle">
+        <input type="checkbox" id="vacation-toggle">
+        <span class="slider" aria-hidden="true"></span>
+      </label>
+    </div>
+
+    <div class="today-label">
+      <span id="today-date"></span>
+    </div>
+
+    <div id="duty-cards" class="duty-cards"></div>
+
+    <div class="preview">
+      <h2>Podgląd na kolejne dni</h2>
+      <div class="table-scroll">
+        <table id="preview-table">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>🍳 Kuchnia</th>
+              <th>🗑️ Śmieci</th>
+              <th>🧹 Sprzątanie</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Rodzina Mińczyńskich</div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
