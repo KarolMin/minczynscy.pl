@@ -1,0 +1,270 @@
+:root {
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --text: #2c2620;
+  --text-muted: #7a7168;
+  --border: #ece5da;
+  --accent: #d97a4d;
+  --accent-soft: #f6e3d6;
+  --radius: 16px;
+  --shadow: 0 4px 16px rgba(60, 45, 25, 0.06);
+
+  --zosia: #e0658f;
+  --zosia-bg: #fceaf1;
+  --franek: #3d7ab8;
+  --franek-bg: #e6f0fa;
+  --jerzyk: #4a9d6e;
+  --jerzyk-bg: #e7f5ec;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Duty section */
+.duty-section {
+  padding: 40px 20px 60px;
+}
+
+.duty-heading h1 {
+  margin: 0 0 4px;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: var(--text-muted);
+}
+
+.mode-toggle-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.mode-toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mode-toggle-text strong {
+  font-size: 1.05rem;
+}
+
+.mode-toggle-text span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #d9d2c7;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.switch input:checked + .slider {
+  background-color: var(--accent);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+.switch input:focus-visible + .slider {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.today-label {
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+/* Duty cards */
+.duty-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.duty-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.duty-card .duty-icon {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.duty-card .duty-name {
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.kid-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0 auto 10px;
+}
+
+.kid-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.kid-zosia .kid-avatar { background: var(--zosia-bg); color: var(--zosia); }
+.kid-zosia .kid-name { color: var(--zosia); }
+.kid-franek .kid-avatar { background: var(--franek-bg); color: var(--franek); }
+.kid-franek .kid-name { color: var(--franek); }
+.kid-jerzyk .kid-avatar { background: var(--jerzyk-bg); color: var(--jerzyk); }
+.kid-jerzyk .kid-name { color: var(--jerzyk); }
+
+@media (max-width: 640px) {
+  .duty-cards { grid-template-columns: 1fr; }
+}
+
+/* Preview table */
+.preview h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+th {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tr.is-today { background: var(--accent-soft); }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
