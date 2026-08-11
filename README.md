@@ -30,10 +30,23 @@ python3 -m http.server 8000
 
 i wejść na `http://localhost:8000`.
 
+## Publikacja (GitHub Pages)
+
+Strona publikuje się automatycznie przez GitHub Actions
+(`.github/workflows/deploy.yml`) przy każdym pushu do `main`. Warunek:
+w ustawieniach repo **Settings → Pages → Build and deployment → Source**
+musi być ustawione na **GitHub Actions** (nie "Deploy from a branch").
+
+Domena własna (`minczynscy.pl`) jest ustawiona w pliku `CNAME` w
+katalogu głównym repo — publikowana jest razem z resztą strony przy
+każdym wdrożeniu.
+
 ## Struktura
 
 ```
 index.html
+CNAME
+.github/workflows/deploy.yml
 assets/
   css/style.css
   js/app.js
