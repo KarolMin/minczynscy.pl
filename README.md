@@ -91,4 +91,10 @@ assets/
   js/config.js   (Client ID + allowlista e-maili)
   js/auth.js     (logowanie przez Google, bramka)
   js/app.js      (dyżury domowe)
+  img/logo.png              (logo, wersja 512x512)
+  img/logo-header.png       (logo, wersja 128x128 - nagłówek, bramka)
+  img/favicon.ico           (favicon, wielorozmiarowy)
+  img/favicon-32.png
+  img/favicon-16.png
+  img/apple-touch-icon.png  (ikona dla iOS/"Dodaj do ekranu głównego")
 ```
