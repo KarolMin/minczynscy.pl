@@ -1,6 +1,6 @@
 # minczynscy.pl
 
-Strona internetowa rodziny Mińczyńskich.
+Strona internetowa rodziny Minczyńskich.
 
 ## Sekcje
 
@@ -52,7 +52,7 @@ Ochrona ma dwie warstwy:
    i utwórz nowy projekt (np. „Minczynscy Family Site”).
 2. **APIs & Services → OAuth consent screen**:
    - User Type: **External**
-   - App name: np. „Mińczyńscy”, support email: Twój adres
+   - App name: np. „Minczyńscy”, support email: Twój adres
    - Zapisz jako **Testing** (nie publikuj/nie wysyłaj do weryfikacji)
    - W sekcji **Test users** dodaj dokładnie te 5 adresów z listy wyżej
 3. **APIs & Services → Credentials → Create Credentials → OAuth client
