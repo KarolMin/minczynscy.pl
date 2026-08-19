@@ -150,10 +150,10 @@ html:not(.authed) .site-footer {
 }
 
 .login-icon {
-  width: 96px;
-  height: 96px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .login-card h1 {
