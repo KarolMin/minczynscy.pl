@@ -50,10 +50,20 @@ body {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: block;
 }
 
 .header-right {
@@ -140,7 +150,9 @@ html:not(.authed) .site-footer {
 }
 
 .login-icon {
-  font-size: 2.5rem;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
   margin-bottom: 8px;
 }
 
